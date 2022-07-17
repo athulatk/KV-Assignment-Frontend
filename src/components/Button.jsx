@@ -1,9 +1,9 @@
 const Button = (props)=>{
 
-    const {label,handleClick} = props
+    const {label,onClick,className,type} = props
 
     return(
-        <button onClick={handleClick}>{label}</button>
+        <button type={type} onClick={onClick} className={className}>{label}</button>
     )
 }
 

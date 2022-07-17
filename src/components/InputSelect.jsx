@@ -1,10 +1,10 @@
-const InputSelect = ({label,options})=>{
+const InputSelect = ({label,options,onChange})=>{
     return(
         <div className="input-field">
-            <div>{label}</div>
-            <select name="" id="">
-                {options.map((item,index)=>(
-                    <option value="" key={index}>{item}</option>
+            <label>{label}</label>
+            <select name="" id="" onChange={onChange} required>
+                {options.map((item)=>(
+                    <option value={item.label} key={item.key}>{item.label}</option>
                 ))}
             </select>
         </div>

@@ -1,7 +1,7 @@
 const UploadInput = ({ label }) => {
     return (
         <div class="input-field">
-            <div>Upload ID Proof</div>
+            <label>Upload ID Proof</label>
             <div className="fileinput-label fileupload">
                 <label>Choose Files</label>
                 <label for="fileinput"> Browse </label>
