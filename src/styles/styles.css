@@ -22,7 +22,7 @@ button{
 
 }
 .sidebar-login{
-    width: 40%;
+    width: 45%;
     height: 100vh;
     position: fixed;
     left: 0;
@@ -30,10 +30,14 @@ button{
     background-color: #B0E6FA;
 
 }
+.sidebar-login>img{
+    width: 100%;
+    height: 100%;
+}
 .main-login{
     background-color:white;
     width: calc(100%-margin-left);
-    margin-left: 40%;
+    margin-left: 45%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -160,6 +164,10 @@ tr{
     text-transform: capitalize;
 }
 
+.entry-row{
+    cursor: pointer;
+}
+
 .table-row ,.table-row>th,.table-row>td{
     padding: 1.2em 1.5em 1.2em 1.5em;
     border: none;
@@ -204,9 +212,13 @@ tr{
     z-index: 10;
 }
 
+.pencil-icon>img{
+    width: 20px;
+}
+
 .createemployee-btn div:last-child{
     background-color:#EAF9FF;
-    padding: 1em 1em 1em 1.5em;
+    padding: 1em 1em 1em 2em;
     border-radius: 0 50px 50px 0;
     margin-left: -20px;
     z-index: -1;
@@ -280,4 +292,17 @@ tr{
     border: 1px solid #D9D9D9;
     border-radius: 5px;
  
+}
+.employeedetails-box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.employeedetails-box>div{
+    width: 16.66%;
+    margin-bottom: 1.7em;
+}
+.employeedetails-box>div>p:first-child{
+    margin-bottom: 0.4em;
+    color: #8B8D9D;
 }

@@ -24,7 +24,6 @@ const EmployeeList = ({employees}) => {
                             <div><p className="plus-icon">+</p></div>
                             <div>Create Employee</div>
                         </div>
-
                     </div>
                 </div>
                 <EmployeeTable employees={employees}/>   

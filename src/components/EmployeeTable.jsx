@@ -1,6 +1,7 @@
 import React from 'react'
-
+import {useNavigate} from 'react-router-dom'
 function EmployeeTable({ employees }) {
+    const navigate=useNavigate()
     return (
         <table className='employee-table'>
             <thead>
@@ -19,7 +20,7 @@ function EmployeeTable({ employees }) {
                 {
                     employees.map((item) => {
                         return (
-                            <tr className='table-row'>
+                            <tr className='table-row entry-row' onClick={()=>navigate('/details')}>
                                 <td >{item.name}</td>
                                 <td>{item.id}</td>
                                 <td>{item.date}</td>
