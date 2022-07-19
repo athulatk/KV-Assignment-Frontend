@@ -1,11 +1,17 @@
-import Sidebar from "./components/Sidebar";
+import Sidebar from "../components/Sidebar";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import './styles/styles.css'
-import './components/EmployeeTable'
-import EmployeeTable from "./components/EmployeeTable";
-const EmployeeList = ({employees}) => {
+import '../styles/styles.css'
+import '../components/EmployeeTable'
+import EmployeeTable from "../components/EmployeeTable";
+import { useGetAllEmployeesQuery } from "../services/EmployeeAPI";
+const EmployeeList = () => {
     const navigate = useNavigate();
-
+    const {data} = useGetAllEmployeesQuery()
+    useEffect(() => {
+        console.log(data)
+    }, [data])
+    console.log(data)
     return (
         <>
             <Sidebar />
@@ -26,7 +32,7 @@ const EmployeeList = ({employees}) => {
                         </div>
                     </div>
                 </div>
-                <EmployeeTable employees={employees}/>   
+                <EmployeeTable data={data}/>   
             </div>
         </>
     );

@@ -306,3 +306,34 @@ tr{
     margin-bottom: 0.4em;
     color: #8B8D9D;
 }
+.employeedetails-box>div>p:last-child{
+    text-transform: capitalize;
+}
+
+.delete-icon{
+    color: red;
+}
+.pencil-icon{
+    color:blue;
+}
+.icon-btn{
+    width: 35px;
+    background-color: inherit;
+}
+.landing-header{
+    background-color: #E2E8FA;
+    padding: 1.2em;
+}
+.landing-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height:80vh;
+}
+.landing-main>h2{
+    color: #FF003F;
+}
+.landing-main>h1{
+    font-size: 50px;
+}

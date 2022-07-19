@@ -4,5 +4,7 @@ import { EmployeeAPI } from '../services/EmployeeAPI'
 export const store = configureStore({
     reducer:{
         [EmployeeAPI.reducerPath]: EmployeeAPI.reducer,
-    }
+    },
+    middleware: getDefaultMiddleware =>
+    getDefaultMiddleware().concat(EmployeeAPI.middleware)
 })

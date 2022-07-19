@@ -6,13 +6,13 @@ function Sidebar() {
   const navigate=useNavigate()
   return (
     <aside class="sidebar">
-      <div class="home-logo" onClick={()=>{navigate("/")}}>
+      <div class="home-logo" onClick={()=>{navigate("/employees")}}>
         <div>
           <img src={KvLogo} class="kvlogo" alt="" />
         </div>
       </div>
       <nav>
-        <div class="nav-item" onClick={()=>navigate("/employeelist")}> <img src={List} class="nav-logo" alt="" /> Employee List</div>
+        <div class="nav-item" onClick={()=>navigate("/employees")}> <img src={List} class="nav-logo" alt="" /> Employee List</div>
       </nav>
     </aside>
   )
