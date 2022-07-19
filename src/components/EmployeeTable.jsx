@@ -1,14 +1,17 @@
-import React from 'react'
+import React,{useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDeleteEmployeeMutation } from '../services/EmployeeAPI'
 import DeleteIcon from './DeleteIcon'
 import PencilIcon from './PencilIcon'
+import Popup from './Popup'
 function EmployeeTable({ data }) {
     const navigate = useNavigate()
     const [deleteEmployee,result] = useDeleteEmployeeMutation()
-    
+    const [deleteId,setDeleteId]=useState('')
+    const [open,setOpen]=useState(false)
     console.log(result)
     return (
+        <>
         <table className='employee-table'>
             <thead>
                 <tr className='table-row'>
@@ -40,7 +43,9 @@ function EmployeeTable({ data }) {
                                 <td>
                                    <button className='icon-btn' onClick={(e)=>{
                                     e.preventDefault();
-                                    deleteEmployee(item.id)
+                                    setDeleteId(item.id)
+                                    setOpen(true)
+                                    // deleteEmployee(item.id)
                                     }}>
                                         <DeleteIcon/>
                                    </button>
@@ -56,6 +61,8 @@ function EmployeeTable({ data }) {
 
 
         </table>
+        {open&&<Popup mainHeading="Are you sure?" subHeading="Do you really want to delete the employee?" func={deleteEmployee} setOpen={setOpen} deleteId={deleteId} setDeleteId={setDeleteId}/>}
+        </>
     )
 }
 

@@ -3,12 +3,13 @@ import '../styles/styles.css'
 import { useNavigate, useParams } from "react-router-dom";
 import Pencil from '../imgs/Pencil.svg'
 import { useGetEmployeeByIdQuery } from "../services/EmployeeAPI";
+import FileIcon from '../imgs/file.svg'
 const EmployeeDetails = () => {
 
     const navigate = useNavigate()
-    let {id}=useParams()
-    const {data}=useGetEmployeeByIdQuery(id);
-    
+    let { id } = useParams()
+    const { data } = useGetEmployeeByIdQuery(id);
+
     return (
         <>
             <Sidebar />
@@ -21,7 +22,7 @@ const EmployeeDetails = () => {
                         <div>Edit</div>
                     </div>
                 </div>
-                <div className="main-header">
+                <div className="main-header employeedetails-main">
                     <div className="employeedetails-box">
                         <div>
                             <p>Employee Name</p>
@@ -33,7 +34,7 @@ const EmployeeDetails = () => {
                         </div>
                         <div>
                             <p>Joining Date</p>
-                            <p>{data?.data?.joiningDate?.slice(0,10)}</p>
+                            <p>{data?.data?.joiningDate?.slice(0, 10)}</p>
                         </div>
                         <div>
                             <p>Email</p>
@@ -46,14 +47,14 @@ const EmployeeDetails = () => {
                         <div>
                             <p>Status</p>
                             <span className='status-style'
-                                        style={{
-                                            padding:"0.3em 0.7em",
-                                            backgroundColor: data?.data.status === 'Active' ? '#D3F4BE' : (data?.data.status === 'Inactive' ? '#FFBFBF' : '#F5ECB8')
-                                        }}>{data?.data.status}</span>
+                                style={{
+                                    padding: "0.3em 0.7em",
+                                    backgroundColor: data?.data.status === 'Active' ? '#D3F4BE' : (data?.data.status === 'Inactive' ? '#FFBFBF' : '#F5ECB8')
+                                }}>{data?.data.status}</span>
                         </div>
                         <div>
                             <p>Experience</p>
-                            <p>{data?.data.experience}</p>
+                            <p>{data?.data.experience} Years</p>
                         </div>
                         <div>
                             <p>Address</p>
@@ -61,7 +62,7 @@ const EmployeeDetails = () => {
                         </div>
                         <div>
                             <p>Employee ID Proof</p>
-                            <p>{data?.data.name}</p>
+                            <p><img src={FileIcon} alt="" /></p>
                         </div>
                     </div>
                 </div>

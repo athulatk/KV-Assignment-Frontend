@@ -164,6 +164,7 @@ tr{
     text-transform: capitalize;
 }
 
+
 .entry-row{
     cursor: pointer;
 }
@@ -175,11 +176,13 @@ tr{
 }
 .table-row>th{
     background-color: #EAF9FF;
+ 
 }
 .table-row>td{
     background-color: white;
     border-spacing:0.5em 0;
 }
+
 
 .status-style{
     border-radius: 50px;
@@ -233,6 +236,7 @@ tr{
     width: 33.33%;
     flex-direction: column;
     margin-bottom: 2.5em;
+    min-width: 400px;
 }
 .input-field>input,.input-field>select{
     padding: 1em 0.5em 1em 0.5em;
@@ -269,9 +273,7 @@ tr{
 #fileinput{
     visibility: hidden;
 }
-/* label{
-    font-weight: bold;
-} */
+
 .fileinput-label{
     background-color: #FAFAFA;
     padding: 0.6em;
@@ -293,13 +295,19 @@ tr{
     border-radius: 5px;
  
 }
+
+.employeedetails-main{
+    width: 85%;
+}
 .employeedetails-box{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    
 }
 .employeedetails-box>div{
     width: 16.66%;
+    min-width: 250px;
     margin-bottom: 1.7em;
 }
 .employeedetails-box>div>p:first-child{
@@ -308,6 +316,7 @@ tr{
 }
 .employeedetails-box>div>p:last-child{
     text-transform: capitalize;
+    overflow-wrap: anywhere;
 }
 
 .delete-icon{
@@ -336,4 +345,41 @@ tr{
 }
 .landing-main>h1{
     font-size: 50px;
+}
+.popup-outer{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.popup-inner{
+    position: relative;
+    padding: 3em;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.popup-inner>h2,.popup-inner>p{
+    margin-bottom: 1em;
+}
+.popup-inner>div{
+    margin-top: 1em;
+}
+.btn-margin{
+    margin: 0;
+}
+.close-btn{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width:35px;
+    background-color: inherit;
 }

@@ -65,16 +65,39 @@ const EditEmployee = () => {
             label: "Role",
             options: [
                 {
-                    key:'',
+                    key:'SELECT',
+                    value:'',
                     label:'Select an option'
                 },
                 {
-                    key: 'DEV',
-                    label: 'Developer'
+                    key:'FRONTEND',
+                    value:'Frontend Engineer',
+                    label:'Frontend Engineer'
+                },
+                {
+                    key:'BACKEND',
+                    value:'Backend Engineer',
+                    label:'Backend Engineer'
+                },
+                {
+                    key: 'FULL',
+                    value:'Full Stack',
+                    label: 'Full Stack'
+                },
+                {
+                    key: 'UI',
+                    value:'UI Engineer',
+                    label: 'UI Engineer'
                 },
                 {
                     key: 'QA',
+                    value:'QA',
                     label: 'QA'
+                },
+                {
+                    key: 'DEVOPS',
+                    value:'Devops',
+                    label: 'Devops'
                 }],
             onChange:(e)=>{setDetails({...details,role:e.target.value})},
             value:details.role
@@ -83,19 +106,23 @@ const EditEmployee = () => {
             label: "Status",
             options: [
                 {
-                    key:'',
+                    key:'SELECT',
+                    value:'',
                     label:'Select an option'
                 },
                 {
                     key:'ACTIVE',
+                    value:'Active',
                     label: 'Active'
                 },
                 {
                     key: 'INACTIVE',
+                    value:'Inactive',
                     label: 'Inactive'
                 },
                 {
                     key: 'PROBATION',
+                    value:'Probation',
                     label: 'Probation'
                 }
                 ],
