@@ -5,14 +5,14 @@ import { useNavigate } from 'react-router-dom'
 function Sidebar() {
   const navigate=useNavigate()
   return (
-    <aside class="sidebar">
-      <div class="home-logo" onClick={()=>{navigate("/employees")}}>
+    <aside className="sidebar">
+      <div className="home-logo" onClick={()=>{navigate("/employees")}}>
         <div>
-          <img src={KvLogo} class="kvlogo" alt="" />
+          <img src={KvLogo} className="kvlogo" alt="" />
         </div>
       </div>
       <nav>
-        <div class="nav-item" onClick={()=>navigate("/employees")}> <img src={List} class="nav-logo" alt="" /> Employee List</div>
+        <div className="nav-item" onClick={()=>navigate("/employees")}> <img src={List} className="nav-logo" alt="" /> Employee List</div>
       </nav>
     </aside>
   )

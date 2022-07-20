@@ -383,3 +383,23 @@ tr{
     width:35px;
     background-color: inherit;
 }
+.no-employees{
+    margin: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5em;
+}
+.no-employees>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.no-employees>div>img{
+    width: 300px;
+    margin-bottom: 2em;
+}
+.no-employees>div>p{
+    margin-left: 1.5em;
+}

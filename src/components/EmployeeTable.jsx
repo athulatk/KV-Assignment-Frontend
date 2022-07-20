@@ -6,10 +6,9 @@ import PencilIcon from './PencilIcon'
 import Popup from './Popup'
 function EmployeeTable({ data }) {
     const navigate = useNavigate()
-    const [deleteEmployee,result] = useDeleteEmployeeMutation()
+    const [deleteEmployee] = useDeleteEmployeeMutation()
     const [deleteId,setDeleteId]=useState('')
     const [open,setOpen]=useState(false)
-    console.log(result)
     return (
         <>
         <table className='employee-table'>
